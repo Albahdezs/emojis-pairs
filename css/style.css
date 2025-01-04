@@ -1,0 +1,179 @@
+/* General */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f4f4f4;
+}
+
+#game-title {
+  text-align: center;
+  margin: 20px 0;
+}
+
+#game-title h1 {
+  font-size: 2rem;
+  color: black;
+  margin: 0;
+}
+
+/* Contenedor principal */
+#container {
+  display: flex;
+  justify-content: center; /* Centramos el contenido horizontalmente */
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+/* Tablero del juego */
+#game-container {
+  flex: 0 0 500px; /* Fijar el ancho del tablero a 500px */
+  text-align: center;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-right: 20px; /* Espacio entre el tablero y el historial */
+}
+
+#game-board {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Crear 4 columnas de igual tamaño */
+  gap: 15px;  /* Espacio entre cartas */
+  justify-items: center;  /* Centrar las cartas en cada celda */
+  align-items: center;    /* Centrar las cartas verticalmente */
+  margin: 20px 0;
+}
+
+/* Card base styles */
+.card {
+  width: 80px;
+  height: 80px;
+  background-color: #808080;  /* Color base */
+  color: transparent;  /* No mostrar texto inicialmente */
+  font-size: 32px; /* Tamaño de icono más grande */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  cursor: pointer;
+  user-select: none;
+  text-transform: uppercase;
+  transition: transform 0.3s, background-color 0.3s;
+  position: relative;
+}
+
+/* Volteo de la carta */
+.card.flipped {
+  background-color: #ffffff;  /* Fondo blanco al voltear */
+  color: black;  /* El texto (icono) es visible al voltear */
+}
+
+/* Emparejamiento de la carta */
+.card.matched {
+  background-color: #28a745;  /* Fondo verde al emparejar */
+  color: white;  /* Mantener el icono visible */
+  transform: none;  /* Mantener la carta en posición normal */
+}
+
+/* Efecto hover para mejorar la experiencia visual */
+.card:hover {
+  background-color: #0056b3; /* Cambio de color de fondo al pasar el ratón */
+}
+
+
+#timer {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+#reset-btn {
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#reset-btn:hover {
+  background-color: #cf4c4c;
+}
+
+/* Historial */
+#history-container {
+  flex: 0 0 300px; /* Fijar el tamaño del historial a 300px */
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  max-width: 100%;
+}
+
+#history-container h3 {
+  font-size: 1.2rem;
+  color: black;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#history-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#history-table th, #history-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+#history-table th {
+  background-color: #808080;
+  color: white;
+  border-radius: 5px;
+}
+
+#history-table tbody tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+#history-table tbody tr:hover {
+  background-color: #e2e2e2;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #container {
+    flex-direction: column;  /* En pantallas más pequeñas, el contenido se acomoda en columna */
+    align-items: center;
+  }
+
+  #game-container {
+    width: 90%;  /* Ajustar tamaño del tablero para móviles */
+    max-width: 500px;
+    margin-right: 0; /* Eliminar margen entre tablero y historial */
+  }
+
+  #history-container {
+    width: 90%;  /* Ajustar el tamaño del historial para móviles */
+    margin-top: 20px;
+  }
+
+  #game-board {
+    grid-template-columns: repeat(4, 1fr);  /* Mantener 4 columnas en móviles */
+    gap: 10px; /* Reducir el espacio entre las cartas en móviles */
+  }
+
+  .card {
+    width: 60px; /* Reducir el tamaño de las cartas en móviles */
+    height: 60px;
+    font-size: 28px; /* Reducir el tamaño del icono en móviles */
+  }
+}

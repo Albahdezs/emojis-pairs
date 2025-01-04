@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Juego de Memoria</title>
+</head>
+<body>
+    <div id="game-title">
+        <h1>Juego de Memoria</h1>
+      </div>
+      <div id="container">
+        <div id="game-container">
+          <div id="timer">Tiempo transcurrido: 00:00</div>
+          <div id="game-board"></div>
+          <button id="reset-btn">Reiniciar juego</button>
+        </div>
+        <div id="history-container">
+          <h3>Historial de Tiempos</h3>
+          <table id="history-table">
+            <thead>
+              <tr>
+                <th>Jugador</th>
+                <th>Tiempo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Filas del historial se añadirán aquí dinámicamente -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+  <script src="./js/script.js"></script>
+</body>
+</html>
