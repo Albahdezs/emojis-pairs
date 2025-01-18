@@ -19,7 +19,7 @@ This game helps improve visual memory and concentration.
 ---
 # ¡Juega ahora! / Play in line!
 
-[**Jugar / Play**] (https://albahdezs.github.io/emojis-pairs/)
+[**Juega ahora / Play now**](https://albahdezs.github.io/emojis-pairs/)
 
 # Soporte / Support 👍
 
