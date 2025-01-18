@@ -17,6 +17,9 @@ The goal is to pair all the emojis in as few moves as possible.
 This game helps improve visual memory and concentration.
 
 ---
+# ¡Juega ahora! / Play in line!
+
+[**Jugar / Play**] (https://albahdezs.github.io/emojis-pairs/)
 
 # Soporte / Support 👍
 
